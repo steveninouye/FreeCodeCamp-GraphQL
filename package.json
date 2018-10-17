@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/steveninouye/FreeCodeCamp-GraphQL/issues"
   },
-  "homepage": "https://github.com/steveninouye/FreeCodeCamp-GraphQL#readme"
+  "homepage": "https://github.com/steveninouye/FreeCodeCamp-GraphQL#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
