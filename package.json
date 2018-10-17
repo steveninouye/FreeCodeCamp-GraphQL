@@ -1,0 +1,23 @@
+{
+  "name": "graphql_react_demo",
+  "version": "1.0.0",
+  "description": "A demo to learn how to set up a GraphQL server with a React front end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steveninouye/FreeCodeCamp-GraphQL.git"
+  },
+  "keywords": [
+    "GraphQL",
+    "React"
+  ],
+  "author": "Steven K. Inouye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steveninouye/FreeCodeCamp-GraphQL/issues"
+  },
+  "homepage": "https://github.com/steveninouye/FreeCodeCamp-GraphQL#readme"
+}
