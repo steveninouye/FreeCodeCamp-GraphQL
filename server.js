@@ -3,8 +3,16 @@ const graphqlHTTP = require('express-graphql');
 const schema = require('./schema/schema');
 
 const app = express();
-const PORT = 4000;
 
-app.use('/graphql', graphqlHTTP({ schema: schema }));
+// bind express with graphql
+app.use(
+    '/graphql',
+    graphqlHTTP({
+        schema: schema,
+        graphiql: true
+    })
+);
 
-app.listen(PORT, () => console.log(`Server listening on PORT::${PORT}`));
+app.listen(4000, () => {
+    console.log('now listening for requests on port 4000');
+});
