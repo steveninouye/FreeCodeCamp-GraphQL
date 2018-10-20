@@ -14,8 +14,7 @@ class AddBook extends Component {
     }
 
     displayAuthors() {
-        console.log(this.props);
-        var data = this.props.data;
+        var data = this.props.authors; // from line 75
         if (data.loading) {
             return <option disabled>Loading Authors...</option>;
         } else {
@@ -31,7 +30,7 @@ class AddBook extends Component {
 
     submitForm(e) {
         e.preventDefault();
-        console.log(this.state);
+        this.props.addBook(); // from line 76
     }
 
     render() {
@@ -74,5 +73,5 @@ class AddBook extends Component {
 
 export default compose(
     graphql(getAuthorsQuery, { name: 'authors' }),
-    graphql(addBookMutation, { name: 'bookAdded' })
+    graphql(addBookMutation, { name: 'addBook' })
 )(AddBook);
