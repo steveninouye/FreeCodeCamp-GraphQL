@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { graphql, compose } from 'react-apollo';
 
-import { getAuthorsQuery, addBookMutation } from '../queries/queries';
+import {
+    getAuthorsQuery,
+    addBookMutation,
+    getBooksQuery
+} from '../queries/queries';
 
 class AddBook extends Component {
     constructor(props) {
@@ -30,7 +34,17 @@ class AddBook extends Component {
 
     submitForm(e) {
         e.preventDefault();
-        this.props.addBook(); // from line 76
+        // from line 76
+        this.props.addBook({
+            variables: {
+                name: this.state.name,
+                genre: this.state.genre,
+                authorId: this.state.authorId
+            },
+            // runs query even if it is a sibling component
+            // re-renders component
+            refetchQueries: [{ query: getBooksQuery }]
+        });
     }
 
     render() {
